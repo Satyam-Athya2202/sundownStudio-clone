@@ -1,0 +1,634 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+*::selection{
+    background-color: #FE330A;
+}
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f3dab8;
+    overflow-x: hidden;
+    font-family: "Neuehaasdisplay roman", sans-serif;
+    cursor: none;
+    
+    
+}
+
+/* .overflow{width: 100%;
+height: 500vh;
+z-index:3}
+*/
+.cursor{
+    height: 1vw;
+    width: 1vw;
+    border-radius: 50%;
+    background-color: black;
+    position: fixed;
+    z-index: 99;
+    pointer-events: none;
+}
+
+
+.loading-page{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+    position: fixed;
+    z-index: 100;
+   
+}
+
+.loading-page span{
+    color: transparent;
+    font-size: 9vh;
+    font-weight: 600;
+    
+}
+
+#page1{
+    min-height: 100vh ;
+    width: 95%;
+    position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background-color: #f3dab8;
+   
+}
+
+.navbar{
+    width: 100%;
+    height: 5.5vw;
+ 
+    padding: 2.5vw 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left{
+    background-image: url("https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15c2_Sundown%20logo.svg");
+    background-size: cover;
+    height: 5.4vw;
+    width: 11.95vw;
+    position: relative;
+    left:3.5vw
+}
+
+
+.nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+}
+.nav-right a{
+    padding: .9vw 1.8vw;
+    border: 1px solid rgba(117, 116, 116, 0.534);
+    text-decoration: none;
+    color: black;
+    border-radius: 100px;
+    font-size: 18px;
+   letter-spacing: .2px;
+   position: relative;
+   cursor: none;
+
+}
+
+
+.pg1-hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 3.5vw 3.5vw;
+    margin-top: 1.5vw;
+
+}
+
+.hero-left{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    width: 35%;
+    height: 20%;
+
+    letter-spacing: -.2px;
+    position: relative;
+    left: 3vw;
+    
+    color: rgba(0, 0, 0, 0.623);
+}
+
+.hero-right{
+    font-size: 11.5vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: rgb(0, 0, 0);
+    text-align: end;
+    letter-spacing: -5px;
+    line-height: 140px;
+    position: relative;
+    left: 2vw;
+ 
+
+}
+
+
+
+.hero-right span{
+    display: inline-block; /* Makes sure the span acts like a block for translation */
+   
+    margin: .5vw .5vw;
+    
+    
+  
+}
+
+
+.string{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left:1vw;
+  bottom: 3vw;
+  width: 100%;
+  height: 100%;
+
+}
+
+#page2{
+    height: 100vh ;
+    width: 95%;
+    position: relative;
+   border-bottom: 1px solid black;
+   background-color: #f3dab8;
+}
+
+.hero-video{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     padding:0vw 3vw;
+  
+}
+
+.hero-video video{
+    width: 100%;
+    position: relative;
+   left: 3vw;
+   bottom: 5.5vw;
+    border-radius: 40px;
+}
+
+
+.hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 46vw;
+    background-color: #FE330A;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    right: -10%;
+    top: 25%;
+    filter: blur(20px);
+  
+ 
+}
+
+
+.hero1-circle{
+    height: 40vw;
+    width: 40vw;
+    background:linear-gradient(#FE320A,#fe740a) ;
+border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: heroCircle1Anime;
+animation-duration: 2.5s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-direction: alternate;
+}
+.hero2-circle{
+    height: 40vw;
+    width: 40vw;
+    background:linear-gradient(#FE320A,#fe5f0a) ;
+  border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+
+       animation-name: heroCircle2Anime;
+animation-duration: 2.5s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-direction: alternate;
+}
+.hero3-circle{
+   
+    height: 40vw;
+    width: 40vw;
+   
+   border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+
+}
+
+@keyframes heroCircle1Anime {
+    
+    from{
+        transform: translate(-10%,10%);
+    }
+
+    to{
+        transform: translate(10%,-10%);
+    }
+}
+@keyframes heroCircle2Anime {
+    
+    from{
+        transform: translate(-25%,0%);
+    }
+
+    to{
+        transform: translate(25%,0%);
+    }
+}
+
+
+
+
+.page2{
+    
+    width: 100%;
+     position: relative;
+     bottom: 5.5vw;
+}
+
+
+.slider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ gap: 1.5vw;
+}
+.move{
+  
+ white-space: nowrap;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+    
+}
+.move h1{
+    font-size: 10vw;
+    text-transform: uppercase;
+    display: inline-block;
+  
+
+}
+
+.move-circle{
+    height: 4.5vw;
+    width: 4.5vw;
+    background-color: #FE330A;
+    border-radius: 50%; 
+    display: inline-block;
+}
+
+
+
+.page3{
+    width: 100%;
+   
+
+    display: flex;
+    gap: 3.5vw;
+    padding-left: 6.5vw;
+    flex-direction: column;
+    background-color: #f3dab8;
+    
+    
+}
+.pg3-textPortion{
+    width: 100%;
+    display: flex;
+    z-index: 80;
+
+}
+
+.pg3-left{
+    width: 55%;
+    font-size: 2.5vw;
+    letter-spacing: -3.5px;
+}
+
+
+.pg3-right{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  
+    flex-direction: column;
+    gap: 4vw;
+    position: relative;
+    left: 5vw;
+    top: 10vw;
+   
+}
+.pg3-right span{
+ font-size: 22px;
+ font-weight: 500;
+   font-family: "Neuehaasdisplay roman", sans-serif;
+}
+
+.pg3-img
+{
+    height: 250px;  
+    width: 350px;
+    background-image: url("https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d1_Holding_thumb-p-500.jpg");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.pg3circle-cont{
+width: 100%;
+height: 40vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.pg3-circle{
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background-color: #FE320A;
+    filter: blur(20px);
+    z-index: 1;
+    position: relative;
+    right:  15vw;
+    bottom: 5vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    animation-name:pg3anime-circle1 ;
+    animation-timing-function: linear;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.pg3-circle2{
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    background-color: #fe3f0a;
+    filter: blur(20px);
+    animation-name:pg3anime-circle2 ;
+    animation-timing-function: linear;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+@keyframes pg3anime-circle1 {
+    from{
+        transform: translate(-10%, 10%)   skew(0deg);
+      
+    }
+    to{
+        transform: translate(10%, -10%)skew(15deg);
+    }
+    
+}
+@keyframes pg3anime-circle2 {
+    from{
+        transform: translate(-15%, 15%) skew(0deg);
+    }
+    to{
+        transform: translate(15%, -15%) skew(15deg);
+    }
+    
+}
+
+
+.movingBar{
+    width: 100%;
+    height: 15vh;
+ 
+    margin-top: 10.5vh;
+    display: flex;
+   justify-content: center;
+align-items: center;
+}
+
+.movingBar1{
+    height: 6vh;
+    width: 100%;
+    background-color: #FE330A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;   
+    filter: blur(20px);
+}
+.movingBar2{
+    height: 8vh;
+    width: 100%;
+    background-color: #FE330A;
+   animation: movingBar-anime;
+   animation-duration: 1.5s;
+   animation-direction: alternate;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   filter: blur(20px);
+}
+
+
+@keyframes movingBar-anime {
+
+    from{
+        transform: translate(0%,20%);
+    }
+    to{
+        transform: translate(0%,-20%);
+    }
+}
+
+
+.page4{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Neuehaasdisplay mediu, sans-serif;
+    flex-direction: column;
+    position: relative;
+    background-color: #f3dab8;
+  
+}
+
+.pg4-container{
+    width: 100%;
+    
+}
+
+.overlay{
+    width: 100%;
+    height: 9vw;
+    background-color: orange;
+    position: absolute;
+    left:0%;
+   top:-100%
+}
+.page4 a{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    cursor: none;
+
+}
+
+/* .page4 a :hover .overlay{
+    top:0%;
+    transition: all ease-in .18s;
+    transition-delay: .1s;
+    
+} */
+.pg4-row{
+    width: 100%;
+    height: 6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1.5vw ;
+    border-bottom: .5px solid rgba(0, 0, 0, 0.16);
+   
+}
+
+.pg4-row-left h1{
+  font-size: 8vh;
+  position: relative;
+  left: 2.5vw;
+  font-weight: 600;
+}
+
+.pg4-row-right{
+    display: flex;
+    align-items: flex-end;
+    justify-content:center ;
+    flex-direction: column;
+    position: relative;
+    right: 2.5vw;
+   
+}
+
+.pg4-row-right h3{
+    font-weight: 100;
+    font-size: 1vw;
+}
+.pg4-row-right p{
+    font-weight: 100;
+    font-size: 1vw;
+    color: rgba(0, 0, 0, 0.447);
+}
+
+.pg4-video-cont{
+    
+  /* aspect-ratio: ; */
+  height: 65vh;
+  width: 52vh;
+  background-size: cover;
+  object-fit: contain;
+  border-radius: 30px;
+  overflow: hidden;
+  position: fixed;
+  top: 20%;
+  left: 47%;
+  z-index: 5;
+  display: none;
+  
+}
+
+
+
+.pg4-button a {
+    font-family: "Neuehaasdisplay roman", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    height: 4vw;
+    width: 9vw;
+    border: 1px solid rgba(128, 128, 128, 0.361);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: black;
+    margin: 3vw 8vw;
+    padding: 0vw 2.5vw;
+    background-color: transparent;
+    overflow: hidden; 
+    z-index: 3; 
+    background-color: #f3dab8;
+}
+
+.pg4-button a::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    bottom: -400%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: black;
+    z-index: -1; 
+}
+
+.pg4-button a:hover::before {
+    bottom: 0%;
+    transition: all ease-out  550ms;
+}
+.pg4-button a:hover::before {
+    bottom: 0%;
+    transition: all ease-out  550ms;
+}
+
+.pg4-button a:hover {
+    color: white;
+}
+
+
+.page5{
+    height: 70vh;
+    width:100%;
+border-top: 1px solid rgba(0, 0, 0, 0.326);
+}
